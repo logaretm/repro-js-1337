@@ -2,7 +2,7 @@ import {withSentryConfig} from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-
+  pageExtensions: ["page.tsx", "page.ts", "api.ts", "api.tsx", "handler.ts"],
 };
 
 export default withSentryConfig(nextConfig, {

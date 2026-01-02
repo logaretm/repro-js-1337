@@ -1,6 +1,6 @@
 "use client";
 
-import { triggerServerActionError } from "./actions";
+import { triggerServerActionError } from "./actions.handler";
 
 export default function ServerActionErrorPage() {
   return (
