@@ -4,6 +4,8 @@
 
 import * as Sentry from "@sentry/nextjs";
 
+console.log('[sentry.server.config.ts] Initializing Sentry server SDK, DSN:', process.env.NEXT_SENTRY_DSN ? 'SET' : 'NOT SET');
+
 Sentry.init({
   dsn: process.env.NEXT_SENTRY_DSN,
 
@@ -16,4 +18,9 @@ Sentry.init({
   // Enable sending user PII (Personally Identifiable Information)
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#sendDefaultPii
   sendDefaultPii: true,
+
+  // Enable debug mode
+  debug: true,
 });
+
+console.log('[sentry.server.config.ts] Sentry server SDK initialized');
